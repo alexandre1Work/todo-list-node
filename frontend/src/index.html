@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
+    <title>Lista de Tarefas</title>
+</head>
+<body class="bg-blue-500 font-montserrat">
+    
+    <main class="bg-white rounded-lg p-5 w-[90%] m-[40px_auto] shadow-[0_4px_8px_rgba(0,0,0,1)]">
+        <form id="add-form" class="flex mb-12 gap-4 w-full">
+            <input id="input-task" type="text" placeholder="Adicionar nova tarefa" class="w-full flex-1 p-4 border border-[#DDD] rounded-md outline-none text-base font-semibold">
+            <button id="add-button" type="button" class="bg-green-500 h-12 w-12 border-none rounded-md text-white text-2xl flex items-center justify-center font-medium cursor-pointer">+</button>
+        </form>
+
+        <table class="table-auto w-full border-collapse">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 border border-[#DDD] text-center">Tarefa</th>
+                    <th class="px-4 py-2 border border-[#DDD] text-center">Criada em</th>
+                    <th class="px-4 py-2 border border-[#DDD] text-center">Status</th>
+                    <th class="px-4 py-2 border border-[#DDD] text-center">Ações</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center ">Terminar site</td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">24/10/2024</td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">
+                        <Select class="w-full border-none p-2 rounded-lg font-semibold capitalize bg-[#EBEBEB] hover:bg-[#DDD]"> 
+                            <option value="pendente" selected>pendente</option>
+                            <option value="em andamento">em andamento</option>
+                            <option value="concluída">concluída</option>
+                        </Select>
+                    </td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">
+                        <button class="border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-blue-500 mr-2">
+                            <span><i class="fa-solid fa-pen-to-square"></i></span>
+                        </button>
+                        <button class="border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-red-500 mr-2">
+                            <span><i class="fa-solid fa-trash"></i></span>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="bg-[#F5F5F5]">
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center ">Terminar site</td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">24/10/2024</td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">
+                        <Select class="w-full border-none p-2 rounded-lg font-semibold capitalize bg-[#EBEBEB] hover:bg-[#DDD]"> 
+                            <option value="pendente" selected>pendente</option>
+                            <option value="em andamento">em andamento</option>
+                            <option value="concluída">concluída</option>
+                        </Select>
+                    </td>
+                    <td class="text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center">
+                        <button class="border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-blue-500 mr-2">
+                            <span><i class="fa-solid fa-pen-to-square"></i></span>
+                        </button>
+                        <button class="border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-red-500 mr-2">
+                            <span><i class="fa-solid fa-trash"></i></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="https://kit.fontawesome.com/90a969b901.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
