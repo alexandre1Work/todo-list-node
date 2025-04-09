@@ -1,0 +1,2 @@
+*.js linguist-detectable=true
+style/output.css linguist-generated=true
