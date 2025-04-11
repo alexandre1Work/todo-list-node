@@ -96,7 +96,7 @@ const createSelect = (value) => {
         <option value="concluída">concluída</option>
     `;
 
-    const select = createElement('select', '', 'w-full border-none p-2 rounded-lg font-semibold capitalize bg-[#EBEBEB] hover:bg-[#DDD]', options);
+    const select = createElement('select', '', 'select-table', options);
 
     select.value = value;
 
@@ -108,11 +108,11 @@ const createRow = (task) => {
 
     const { id, title, created_at, status } = task;
 
-    const tr = createElement('tr', '', 'text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center');
-    const tdTitle = createElement('td', title, 'text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center');
-    const tdCreatedAt = createElement('td', formatDate(created_at), 'text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center');
-    const tdStatus = createElement('td', '', 'text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center');
-    const tdActions = createElement('td', '', 'text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center');
+    const tr = createElement('tr', '', 'line-table');
+    const tdTitle = createElement('td', title, 'line-table');
+    const tdCreatedAt = createElement('td', formatDate(created_at), 'line-table');
+    const tdStatus = createElement('td', '', 'line-table');
+    const tdActions = createElement('td', '', 'line-table');
 
     const select = createSelect(status);
 
@@ -120,8 +120,8 @@ const createRow = (task) => {
 
     tdStatus.appendChild(select);
 
-    const editButton = createElement('button', '', 'border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-blue-500 mr-2', '<span><i class="fa-solid fa-pen-to-square"></i></span>')
-    const deleteButton = createElement('button', '', 'border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-red-500 mr-2', '<span><i class="fa-solid fa-trash"></i></span>');
+    const editButton = createElement('button', '', 'btn-edit', '<span><i class="fa-solid fa-pen-to-square"></i></span>')
+    const deleteButton = createElement('button', '', 'btn-delete', '<span><i class="fa-solid fa-trash"></i></span>');
 
     const editForm = createElement('form', '', 'flex items-center gap-2');
     const editInput = createElement('input', '', 'w-auto p-2 border border-[#DDD] rounded-md outline-none text-base font-semibold');

@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+.header-table {
+    @apply px-4 py-2 border text-center;
+}
+
+.line-table {
+    @apply text-gray-800 font-semibold px-4 py-2 border border-[#DDD] text-center;
+}
+
+.select-table {
+   @apply w-full border-none p-2 rounded-lg font-semibold capitalize bg-[#EBEBEB] hover:bg-[#DDD];
+}
+
+.btn-edit{
+    @apply border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-blue-500 mr-2;
+}
+
+.btn-delete {
+    @apply border-none rounded-md p-2 text-white inline-flex items-center justify-center cursor-pointer bg-red-500 mr-2;
+}
+
+.input-task {
+    @apply w-full flex-1 p-4 border border-[#DDD] rounded-md outline-none text-base font-semibold;
+}
+
+.btn-add {
+    @apply bg-green-500 h-12 w-12 border-none rounded-md text-white text-2xl flex items-center justify-center font-medium cursor-pointer;
+}
+
+.table {
+    @apply table-auto w-full border-collapse;
+}
